@@ -6,9 +6,11 @@ Now it´s time to evaluate the assemblies you have created, starting with **gfas
 
 Run this code in the terminal command line, and fill out the table below.
 
+
 ```
 gfastats your_assembly.fa
 ```
+
 
 Metric | Value
 -------|-------
@@ -25,3 +27,6 @@ Number of gaps |
 Total gap length | 
 Average gap length |
 Gap N50 |
+
+
+Why do you think each of these metrics are important for evaluating the quality of your assemblies? Discuss with the person sitting next to you.
