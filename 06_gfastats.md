@@ -4,6 +4,10 @@ Now it´s time to evaluate the assemblies you have created, starting with **gfas
 
 ## Evaluating the gfastats results
 
+Run this code in the terminal command line, and fill out the table below.
+
+                gfastats your_assembly.fa
+
 Metric | Value
 -------|-------
 Number of scaffolds |
