@@ -4,7 +4,7 @@ When creating de novo assemblies, there are a lot of considerations to take into
 
 ## Creating a k-mer profile plot
 
-´´´
+```
 #!/bin/bash
 #SBATCH --job-name=genomescope
 #SBATCH --account=FIKS
@@ -33,7 +33,8 @@ ls *.fastq* > FILES
 genomescope2 -i reads.histo -o output_ploidy1 -k $k -p 1 1> genomescope_ploidy1.out 2> genomescope_ploidy1.err
 genomescope2 -i reads.histo -o output_ploidy2 -k $k -p 2 1> genomescope_ploidy2.out 2> genomescope_ploidy2.err
 genomescope2 -i reads.histo -o output_ploidy4 -k $k -p 4 1> genomescope_ploidy4.out 2> genomescope_ploidy4.err
-´´´
+
+```
 
 
 ## Interpreting your k-mer profile plot
