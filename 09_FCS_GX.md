@@ -4,4 +4,24 @@ Contaminants can end up in your assemblies in various different ways. Maybe some
 
 ## Decontaminating the yeast assemblies
 
+```
+#!/bin/bash
+#SBATCH --job-name=fcsgx
+#SBATCH --account=nn8013k
+#SBATCH --time=5:0:0
+#SBATCH --partition=bigmem
+#SBATCH --mem-per-cpu=60G 
+#SBATCH --cpus-per-task=10
+
+export SHM_LOC=/cluster/projects/nn8013k/opt/fcs
+
+echo "GX_NUM_CORES=10" > env.txt
+
+python3 /cluster/projects/nn8013k/opt/fcs/dist/run_fcsgx.py --fasta $1 --out-dir ./gx_out/ \
+--gx-db  "${SHM_LOC}/gxdb/all" --split-fasta --tax-id $2 \
+--gx-db-disk "${SHM_LOC}/gxdb/all.gxi" \
+--container-engine=singularity --image=/cluster/projects/nn8013k/opt/fcs/fcsgx.sif
+```
+
+
 After running the decontamination script, which foreign contaminants did you find?
