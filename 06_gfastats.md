@@ -6,7 +6,9 @@ Now it´s time to evaluate the assemblies you have created, starting with **gfas
 
 Run this code in the terminal command line, and fill out the table below.
 
-                gfastats your_assembly.fa
+```
+gfastats your_assembly.fa
+```
 
 Metric | Value
 -------|-------
