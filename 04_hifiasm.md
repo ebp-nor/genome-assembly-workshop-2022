@@ -28,3 +28,7 @@ hifiasm -o $1 -t32  \
 $4 \
 1> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".out 2> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".err
 ```
+
+```
+awk '/^S/{print ">"$2"\n"$3}' in.gfa | fold > out.fa
+```
