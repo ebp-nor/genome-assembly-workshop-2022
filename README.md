@@ -10,6 +10,7 @@ This repository contains the course materials for the EBP-Nor Genome Assembly Wo
 * 09:15-11:55 Assembling the yeast genome
   * GenomeScope2
   * Smudgeplot
+  * HiFiAdapterFilt
   * hifiasm
   * YaHS
 * 11:55-12:00 Summary
@@ -19,8 +20,8 @@ This repository contains the course materials for the EBP-Nor Genome Assembly Wo
 ### 13:00-14:00 Validation
 * 13:00-13:15 Introduction to assembly validation
 * 13:15-13:55 Interpreting assembly validation results
-  * BUSCO
   * gfastats
+  * BUSCO
   * Merqury
 * 13:55-14:00 Summary
 
