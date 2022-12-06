@@ -4,7 +4,7 @@ Insert introductary text.
 
 ## Our dataset
 
-Write about the yeast
+*Metschnikowia zobellii* is a yeast found in arctic coastal climates. It was first discovered as a water flea parasite, but have since been found in a wide range of organisms, including plants and other arthropods. *Metschnikowia zobellii* has a small genome, with only five chromosomes.  
 
 
 **Why do we use a combination of HiFi and Hi-C reads?**
