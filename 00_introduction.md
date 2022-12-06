@@ -19,6 +19,12 @@ When combining these two, we can create haplotype resolved assemblies, meaning w
 
 Write about conda, singularity and the modules we are using.
 
+To load conda, do this:
+```
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
+```
 ## Infrastructure
+
+We are using Educloud. Everyone need an account. Our project is ec146.
 
 Write about the infrastructure that we are using in the workshop.
