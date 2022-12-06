@@ -2,11 +2,11 @@
 
 Today you´ll learn how to assemble a whole genome, EBP-Nor style! 
 
-After attending the workshop learners should:
-- Know about most-used approaches for genome assembly
-- Assess information inherit in sequencing reads
-- Be able to validate genome assemblies
-- Know about manual curation of assemblies
+After attending the workshop you should:
+- know about the most-used approaches for genome assembly
+- be able to assess information inherit in sequencing reads
+- be able to validate genome assemblies
+- know about manual curation of assemblies
 
 
 ## Our dataset
