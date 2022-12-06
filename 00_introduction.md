@@ -1,6 +1,13 @@
 # Welcome to the Genome assembly, curation and validation workshop!
 
-Insert introductary text.
+Today you´ll learn how to assemble a whole genome, EBP-Nor style! 
+
+After attending the workshop learners should:
+- Know about most-used approaches for genome assembly
+- Assess information inherit in sequencing reads
+- Be able to validate genome assemblies
+- Know about manual curation of assemblies
+
 
 ## Our dataset
 
