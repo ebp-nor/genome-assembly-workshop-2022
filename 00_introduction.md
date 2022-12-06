@@ -9,7 +9,7 @@ Write about the yeast
 
 **Why do we use a combination of HiFi and Hi-C reads?**
 
-HiFi sequencing creates circularized consensus reads. What this means is that by ligating hairpin adapters, the DNA fragment that is being sequenced by the Sequel II becomes a circle. This means that the machine can du multiple passes over the same DNA-sequence, to weed out any misread nucleotides. This is how HiFi reads can be so long, while remaining over 99.9% accurate. 
+HiFi sequencing creates highly accurate circularized consensus reads. How are these reads generated? By ligating hairpin adapters, the DNA fragment that is being sequenced by the Sequel II becomes a circle. This means that the machine can du multiple passes over the same DNA-sequence, to weed out any misread nucleotides. This is how HiFi reads can be so long, while remaining over 99.9% accurate. 
 
 Hi-C sequencing is done to capture how the chromatin is folded within the cell nucleus. By ligating the folded DNA-strands, we can capture which loci are found in close proximity, and thus which parts of the DNA are found within the same chromosomes.
 
