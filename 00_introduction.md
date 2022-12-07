@@ -19,7 +19,7 @@ The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 10
 ```
 seqtk sample ERR9588940.fastq.gz 40000 |gzip > ERR9588940_30x.fastq.gz
 ```
-to get about 30x coverage with PacBio data.
+to get about 30x coverage with PacBio data. For the exact data you are working with, we also added a surprise which you will discover later in the workshop.
 
 
 
