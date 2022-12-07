@@ -21,10 +21,9 @@ hifiasm -o $1 -t5  \
 --h2 $3 \
 $4 \
 1> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".out 2> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".err
-```
 
-```
-awk '/^S/{print ">"$2"\n"$3}' in.gfa | fold > out.fa
+awk '/^S/{print ">"$2"\n"$3}' $1.hic.hap1.p_ctg.gfa | fold > $1.hic.hap1.p_ctg.fa
+awk '/^S/{print ">"$2"\n"$3}' $1.hic.hap2.p_ctg.gfa | fold > $1.hic.hap2.p_ctg.fa
 ```
 
 
