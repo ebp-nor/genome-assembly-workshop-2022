@@ -32,7 +32,7 @@ Now that you know how to move around and make edits in PretextView, delete all y
 
 When editing a Hi-C contact map, you need to make *the same* edits to the TPF-file you generated with the Rapid curation suite. 
 
-Bring up your TPF in your command line window with the command:
+To make edits to your TPF in the command line, type:
 
 ```
 nano filename.tpf
