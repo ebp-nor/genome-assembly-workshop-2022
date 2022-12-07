@@ -98,7 +98,7 @@ In some instances you´ll want to invert segments in your chromosome sized scaff
 
 ### Step 4: Painting your scaffolds
 
-You have made your edits, and now you hopefully have five large scaffolds matching *Metschnikowia zobellii´s* karyotype. Before finishing your assembly, you need to "paint" them. What does this mean? You need to mark which scaffolds are part of the same "super-scaffolds" or chromosomes, so they´ll all have the same name in the final fasta. 
+You have made your edits, and now you hopefully have five large scaffolds matching *Metschnikowia zobellii´s* karyotype. Before finishing your assembly, you need to "paint" them. What does this mean? You need to mark which scaffolds are part of the same "super-scaffolds" or chromosomes, so they´ll all have the same name in the final FASTA. 
 
 Enter the "Scaffold Edit Mode" by pressing **S**. Go to the bottom right corner, and left click on the smallest scaffold you want to include as a chromosome. 
 
@@ -106,3 +106,48 @@ While clicking, hold **A**, and drag in a diagonal line (following the contact s
 
 
 ### Step 5: Finishing your assembly
+
+To finish your assembly you need to:
+
+#### 1. Create an AGP file
+
+Press **U** to bring up the main menu. Press the "Generate AGP" button, and create a out.pretext.agp file. 
+
+#### 2. Transfer your out.pretext.agp file to educloud
+
+Bring the AGP file back to your working directory opening another terminal window, going to the folder where you saved your AGP-file, and write:
+
+```
+scp -r out.pretext.agp ec-your_username@fox.educloud.no:/projects/ec146/work/folder_with_tpf
+```
+
+Enter your password and the file will be transferred to the directory. 
+
+#### 3. Create a new TPF and new FASTA from the original edited TPF and AGP file
+
+Activate the rapid_curation conda environment. Using the rapid_pretext2tpf_XL.py script, combine the edited TPF and the generated AGP to create a new TPF. 
+
+```
+source /cluster/projects/nn8013k/programs/miniconda3/etc/profile.d/conda.sh
+eval "$(conda shell.bash hook)"
+conda activate rapid_curation
+
+# create new tpf
+
+python /cluster/projects/nn8013k/opt/rapid-curation/rapid_pretext2tpf_XL.py \
+kcLamPlan1.h1.decon.fasta.tpf \
+out.pretext.agp_1
+
+```
+
+Using the new TPF, the chrs.csv-file generated with the Rapid curation suite, and the original fasta, you can create a new fasta with the rapid_join.pl script:
+
+# create new fasta
+
+perl /cluster/projects/nn8013k/opt/rapid-curation/rapid_join.pl -fa kcLamPlan1.h1.decon.fasta \
+-tpf rapid_prtxt_XL.tpf \
+-csv chrs.csv \
+-out hap1_curated.fasta
+```
+
+And now you are left with a complete, curated, haplotype resolved whole-genome assembly!
