@@ -7,18 +7,13 @@ The creators of GenomeScope2 created another way to visualize and estimate the p
 ```
 #!/bin/bash
 #SBATCH --job-name=smudgeplot
-#SBATCH --account=FIKS
-#SBATCH --time=48:0:0
-#SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=60G
-#SBATCH --ntasks-per-node=10
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=2G
+#SBATCH --ntasks-per-node=5
 
 
-#to get correct samtools: conda install -c bioconda samtools openssl=1.0
-
-source /cluster/projects/path/to/conda.sh
-
-eval "$(conda shell.bash hook)"
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate smudgeplot
 
@@ -30,7 +25,7 @@ ploidy=2
 
 mkdir -p tmp
 ls *.fastq* > FILES
-[ -s reads.kmc_suf ] || kmc -k$k -t10 -m38 -ci1 -cs10000 @FILES reads tmp/
+[ -s reads.kmc_suf ] || kmc -k$k -t5 -m38 -ci1 -cs10000 @FILES reads tmp/
 
 [ -s reads.histo ] || kmc_tools transform reads histogram reads.histo -cx10000
 
