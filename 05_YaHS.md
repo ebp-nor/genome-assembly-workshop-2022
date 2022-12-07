@@ -41,3 +41,14 @@ else
 fi
 
 ```
+
+As we did with hifiasm, we have set up this script for you. Create a run.sh in your working folder (`/projects/ec146/work/<username>/yahs`) with this content (with `nano` for instance):
+
+```
+sbatch /projects/ec146/scripts/run_yahs.sh gsMetZobe \
+put_in_the_rest
+```
+
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
+
+This should finish in a handful of minutes (when testing it ran for 25 minutes). You can monitor the progress with `squeue -u <username>`.
