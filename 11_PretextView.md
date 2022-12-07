@@ -92,7 +92,7 @@ While this is possible, we will not be doing those kind of edits in this course.
 
 Ask us for help! You can also read more about these ambiguous signals in GRIT´s documentation [here](https://gitlab.com/wtsi-grit/rapid-curation/-/blob/main/PretextView%20-%20Tutorial.pdf). 
 
-#### I want to make edits within one of the larger scaffolds, what do I do?
+#### "I want to make edits within one of the larger scaffolds, what do I do"
 
 In some instances you´ll want to invert segments in your chromosome sized scaffolds. If there are gaps in the breakpoints where you want to make the inversion, you simply edit the TPF as shown above. However, if there are no gaps, do not make the edit. To invert segments, press spacebar again after you have picked up the segment you want to invert. 
 
@@ -102,7 +102,7 @@ You have made your edits, and now you hopefully have five large scaffolds matchi
 
 Enter the "Scaffold Edit Mode" by pressing **S**. Go to the bottom right corner, and left click on the smallest scaffold you want to include as a chromosome. 
 
-While clicking, hold **A**, and drag in a diagonal line (following the contact signal) till you reach the end of the chromosome. Repeat until you´ve reached the end in the left top corner, and have painted all the scaffolds. 
+While clicking, hold **A**, and drag in a diagonal line (following the contact signal) till you reach the end of the chromosome. Repeat until you have reached the end in the left top corner, and have painted all the scaffolds. 
 
 
 ### Step 5: Finishing your assembly
