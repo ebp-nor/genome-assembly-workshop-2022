@@ -8,7 +8,7 @@ There are many ways to view a Hi-C contact map, but today we are going to use Pr
 
  To start the curation process, open the PretextView desktop application, click **load map**, and navigate to where you saved your pretext files. 
  
- When you load your Hi-C contact map, this is what it should look like, depending on which colour scheme you have chosen. For this tutorial we will be using "Blue-Orange Divergent".  
+ When you load your Hi-C contact map, this is what it should look like, depending on which colour scheme you have chosen. For this tutorial we will be using **"Blue-Orange Divergent"**.  
  
  Here, each square represents a scaffold (which after curation will hopefully all be of chromosome length). The red line in the centre shows where the strongest contact signals are between the DNA sequences. 
 
@@ -24,7 +24,7 @@ Try to move around in the contact map. Scrolling the mouse wheel zooms you in an
 
 When your comfortable with this movement, let´s try to bring up some of the other menus! Pressing **E** activates "Edit mode". When this mode is active, the cursor changes. Do you see that the further away from the red diagonal you move, the larger an area of the scaffold is marked by green? This green indicator shows which part of the scaffold you are picking up. Try to make an edit! Cut out a chunk of a scaffold and move it someplace else in the contact map. Don´t worry about whether the edit is correct, we´ll delete all the test edits before we start the proper curation process. 
 
-Move to the far right of the contact map. Are there any smaller, unplaced scaffolds with clear red contact signals that you think would go well in any of the larger scaffolds? Hover over them, press the space bar, and move the cursor without clicking the left button. When you have oriented yourself to where you want to place the unplaced scaffold, click the left cursor. If the piece fits best on the end of one of the larger squares, press **S** while in Edit mode to toggle the Snap function. Do you notice that the unplaced scaffold "travels" differently across the contact map, in a skipping motion? This lets you "snap" the unplaced scaffold in place at the end of the larger scaffolds. 
+Move to the far right of the contact map. Are there any smaller, unplaced scaffolds with clear, red contact signals that you think would go well in any of the larger scaffolds? Hover over them, press the space bar, and move the cursor without clicking the left button. When you have oriented yourself to where you want to place the unplaced scaffold, click the left cursor. If the piece fits best on the end of one of the larger squares, press **S** while in Edit mode to toggle the Snap function. Do you notice that the unplaced scaffold "travels" differently across the contact map, in a skipping motion? This lets you "snap" the unplaced scaffold in place at the end of the larger scaffolds. 
 
 Now that you know how to move around and make edits in PretextView, delete all your edits with **Q** while in Edit mode, and press **U** to check to see that all your test edits are gone. You are now ready to edit the assembly for real!
 
@@ -86,11 +86,11 @@ You have now made your first edit! There is no need to do anything to the scaffo
 
 #### "I want to add an unplaced scaffold to the middle of one of the larger, chromosome sized scaffolds, where there is NOT a gap"
 
-While this is possible, we will not be doing those kind of edits in this course. You need a higher resolution editor to be able to create gaps in the correct place in the assembly (such as HiGlass, which you can read about here).
+While this is possible, we will not be doing those kind of edits in this course. You need a higher resolution editor to be able to create gaps in the correct place in the assembly (such as HiGlass, which you can read about [here](http://higlass.io/)).
 
 #### "Some of my unplaced scaffolds have ambiguous contact signals, what do I do?"
 
-Ask us for help! You can also read more about these ambiguous signals in GRIT´s documentation here. 
+Ask us for help! You can also read more about these ambiguous signals in GRIT´s documentation [here](https://gitlab.com/wtsi-grit/rapid-curation/-/blob/main/PretextView%20-%20Tutorial.pdf). 
 
 #### I want to make edits within one of the larger scaffolds, what do I do?
 
