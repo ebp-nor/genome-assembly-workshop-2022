@@ -34,7 +34,6 @@ echo $L $U # these need to be sane values
 # L should be like 20 - 200
 # U should be like 500 - 3000
 
-
 kmc_tools transform reads -ci"$L" -cx"$U" dump -s kmcdb_L"$L"_U"$U".dump
 smudgeplot.py hetkmers -o kmcdb_L"$L"_U"$U" < kmcdb_L"$L"_U"$U".dump
 
@@ -48,8 +47,10 @@ sbatch /projects/ec146/scripts/run_smudgeplot.sh /fp/projects01/ec146/data/genom
 ```
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
+ 
+This should finish in a handful of minutes (when testing it ran for 1.5 minutes). You can monitor the progress with `squeue -u <username>`.
 
-
+Smudgeplot produces several files in addition to the plot itself. You can for instance look at `smudgeplot_verbose_summary.txt` which contain the same information as the plot, but in text.
 
   
 ## Interpreting your smudgeplot
