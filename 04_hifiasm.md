@@ -26,3 +26,14 @@ $4 \
 ```
 awk '/^S/{print ">"$2"\n"$3}' in.gfa | fold > out.fa
 ```
+
+
+We have set up this script for you. What you need to do is to create a run.sh in your working folder (`/projects/ec146/work/<username>/smudgeplot`) with this content (with nano for instance): 
+ 
+```
+sbatch /projects/ec146/scripts/run_smudgeplot.sh /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
+```
+
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
+ 
+This should finish in a handful of minutes (when testing it ran for 1.5 minutes). You can monitor the progress with `squeue -u <username>`.
