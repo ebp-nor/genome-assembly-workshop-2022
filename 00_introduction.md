@@ -1,6 +1,6 @@
 # Welcome to the Genome assembly, curation and validation workshop!
 
-Today you´ll learn how to assemble a whole genome, EBP-Nor style! 
+Today you'll learn how to assemble a whole genome, EBP-Nor style! 
 
 After attending the workshop you should:
 - know about the most-used approaches for genome assembly
@@ -11,10 +11,16 @@ After attending the workshop you should:
 
 ## Our dataset
 
-*Metschnikowia zobellii* is a yeast found in arctic coastal climates. It was first discovered as a water flea parasite, but have since been found in a wide range of organisms, including plants and other arthropods. *Metschnikowia zobellii* has a small genome, with only five chromosomes.  
+*Metschnikowia zobellii* is a yeast found in arctic coastal climates. It was first discovered as a water flea parasite, but have since been found in a wide range of organisms, including plants and other arthropods. *Metschnikowia zobellii* has a small genome, with only five chromosomes. You can read more about it (here)[https://www.darwintreeoflife.org/news_item/9-species-our-scientists-are-excited-about-sequencing-in-2022/] (scroll down a bit).
+
+(Darwin Tree of Life)[https://www.darwintreeoflife.org] has sequenced the yeast, but not published a genome not for it yet. Fortunately for us, they allow everyone to play with the data anyhow, so we will do that. DToL has some interesting webpages where they list several quality measures for the sequencing (some of which we will do in this workshop) (here)[https://tolqc.cog.sanger.ac.uk/darwin/fungi/Metschnikowia_zobellii/]. It can be worth a look. We downloaded the data from (ENA)[https://www.ebi.ac.uk/ena/browser/view/GCA_939531405.1] and subsampled it to get it to the coverages we expect/plan for. 
+
+The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 1000x coverage. It was subsampled with seqtk like this:
+
+seqtk sample ERR9588940.fastq.gz 40000 |gzip > ERR9588940_30x.fastq.gz
 
 
-**Why do we use a combination of HiFi and Hi-C reads?**
+## Why do we use a combination of HiFi and Hi-C reads? 
 
 HiFi sequencing creates highly accurate circularized consensus reads. How are these reads generated? By ligating hairpin adapters, the DNA fragment that is being sequenced becomes a circle. This means that the machine can du multiple passes over the same DNA-sequence, to weed out any misread nucleotides. This is how HiFi reads can be so long, while remaining over 99.9% accurate. 
 
