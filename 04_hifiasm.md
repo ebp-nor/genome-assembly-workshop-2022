@@ -6,23 +6,17 @@ When choosing an assembler, you need to keep your data in mind. Since we want to
 
 ```
 #!/bin/bash
-#SBATCH --job-name=hifiasm
-#SBATCH --account=FIKS
-#SBATCH --time=96:0:0
-#SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=45000M
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=32
+#SBATCH --job-name=smudgeplot
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=2G
+#SBATCH --ntasks-per-node=5
 
-module --force purge
-
-source /cluster/projects/path/to/conda.sh
-
-eval "$(conda shell.bash hook)"
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate hifiasm
 
-hifiasm -o $1 -t32  \
+hifiasm -o $1 -t5  \
 --h1 $2 \
 --h2 $3 \
 $4 \
