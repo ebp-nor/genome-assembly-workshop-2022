@@ -92,7 +92,13 @@ While this is possible, we will not be doing those kind of edits in this course.
 
 Ask us for help! You can also read more about these ambiguous signals in GRIT´s documentation here. 
 
+#### I want to make edits within one of the larger scaffolds, what do I do?
+
+In some instances you´ll want to invert segments in your chromosome sized scaffolds. If there are gaps in the breakpoints where you want to make the inversion, you simply edit the TPF as shown above. However, if there are no gaps, do not make the edit. To invert segments, press spacebar again after you have picked up the segment you want to invert. 
+
 ### Step 4: Painting your scaffolds
+
+You have made your edits, and now you hopefully have five large scaffolds
 
 
 ### Step 5: Finishing your assembly
