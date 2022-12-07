@@ -51,4 +51,4 @@ put_in_the_rest
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
 
-This should finish in a handful of minutes (when testing it ran for 25 minutes). You can monitor the progress with `squeue -u <username>`.
+This should finish in a handful of minutes (when testing it ran for XX minutes). You can monitor the progress with `squeue -u <username>`.
