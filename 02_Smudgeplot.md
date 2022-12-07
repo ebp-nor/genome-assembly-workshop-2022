@@ -54,3 +54,11 @@ Smudgeplot produces several files in addition to the plot itself. You can for in
 
   
 ## Interpreting your smudgeplot
+
+This is a smudgeplot generated for the EBP-Nor river lamprey (*Lampetra fluviatilis*):
+
+![smudgeplot_riverlamprey](https://user-images.githubusercontent.com/110542053/206215771-1649b262-b685-4946-a869-397ff69ce533.png)
+
+Here we see that based on the coverage of the heterozygous kmer pairs, the most represented haplotype structure for the river lamprey is diploid. 
+
+Which is the most representet haplotype for *Metschnikowia zobellii*? 
