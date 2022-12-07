@@ -15,9 +15,10 @@ After attending the workshop you should:
 
 (Darwin Tree of Life)[https://www.darwintreeoflife.org] has sequenced the yeast, but not published a genome not for it yet. Fortunately for us, they allow everyone to play with the data anyhow, so we will do that. DToL has some interesting webpages where they list several quality measures for the sequencing (some of which we will do in this workshop) (here)[https://tolqc.cog.sanger.ac.uk/darwin/fungi/Metschnikowia_zobellii/]. It can be worth a look. We downloaded the data from (ENA)[https://www.ebi.ac.uk/ena/browser/view/GCA_939531405.1] and subsampled it to get it to the coverages we expect/plan for. 
 
-The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 1000x coverage. It was subsampled with seqtk like this:
-
+The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 1000x coverage. It was subsampled with (seqtk)[https://github.com/lh3/seqtk] like this:
+```
 seqtk sample ERR9588940.fastq.gz 40000 |gzip > ERR9588940_30x.fastq.gz
+```
 
 
 ## Why do we use a combination of HiFi and Hi-C reads? 
