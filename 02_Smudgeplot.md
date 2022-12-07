@@ -14,7 +14,7 @@ The creators of GenomeScope2 created another way to visualize and estimate the p
 
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
-conda activate smudgeplot
+conda activate smudgescope
 
 #reads as fastq
 reads=$1
@@ -22,7 +22,7 @@ k=21
 ploidy=2
 
 mkdir -p tmp
-ls $reads > FILES
+echo $reads > FILES
 
 [ -s reads.kmc_suf ] || kmc -k$k -t5 -m38 -ci1 -cs10000 @FILES reads tmp/
 
@@ -41,4 +41,15 @@ smudgeplot.py hetkmers -o kmcdb_L"$L"_U"$U" < kmcdb_L"$L"_U"$U".dump
 smudgeplot.py plot kmcdb_L"$L"_U"$U"_coverages.tsv
 ```
 
+We have set up this script for you. What you need to do is to create a run.sh in your working folder (/projects/ec146/work/<username>/smudgeplot) with this content: 
+ 
+```
+sbatch /projects/ec146/scripts/run_smudgeplot.sh /projects/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
+```
+
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
+
+
+
+  
 ## Interpreting your smudgeplot
