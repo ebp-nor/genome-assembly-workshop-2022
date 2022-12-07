@@ -18,6 +18,13 @@ There are many ways to view a Hi-C contact map, but today we are going to use Pr
 
  ### Step 2: Moving scaffolds in PretextView
 
+For this step you´ll need a computer mouse. Before you do your first edit, try to orient yourself in the Hi-C contact map. Pressing **U** removes the main menu. Don´t worry, pressing **U** again brings it right back if you want to change any settings. 
+
+Try to move around in the contact map. Scrolling the mouse wheel zooms you in and out. You´ll notice that the zoom is not affected by where your cursor is, so how do we zoom in on one particular scaffold? By dragging the map and placing the area you want to look at in the centre of the screen. To drag the map, click and hold the right mouse button, and move the mouse around. Move around the map for a bit, and look at the scaffolds. Do some look fragmented? Move to the far right bottom corner of the contact map. Are there many smaller scaffolds there?
+
+When your comfortable with this movement, let´s try to bring up some of the other menus! Pressing **E** activates "Edit mode". When this mode is active, the cursor changes. Do you see that the further away from the red diagonal you move, the larger an area of the scaffold is marked by green? This green indicator shows which part of the scaffold you are picking up. Try to make an edit! Cut out a chunk of a scaffold and move it someplace else in the contact map. Don´t worry about whether the edit is correct, we´ll delete all the test edits before we start the proper curation process. 
+
+Move to the far right of the contact map. Are there any 
 
  ### Step 3: Editing your TPF
 
