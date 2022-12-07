@@ -38,7 +38,7 @@ We will do the work in this course at `/projects/ec146/work` on [Fox](https://ww
 
 On Fox we will submit jobs/analyses as job scripts. This is for a system called SLURM. Basically, this are instructions to the system for what kind of analysis we are running, or more concretely, how much memory and computing power we need. 
 
-A generic job script might look like this (copied from [https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/jobs/job-scripts.md](https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/jobs/job-scripts.md):
+A generic job script might look like this (copied from [Job Scripts on Fox](https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/jobs/job-scripts.md)):
 ```
 #!/bin/bash
 
