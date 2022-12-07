@@ -26,12 +26,12 @@ When your comfortable with this movement, let´s try to bring up some of the oth
 
 Move to the far right of the contact map. Are there any smaller, unplaced scaffolds with clear red contact signals that you think would go well in any of the larger scaffolds? Hover over them, press the space bar, and move the cursor without clicking the left button. When you have oriented yourself to where you want to place the unplaced scaffold, click the left cursor. If the piece fits best on the end of one of the larger squares, press **S** while in Edit mode to toggle the Snap function. Do you notice that the unplaced scaffold "travels" differently across the contact map, in a skipping motion? This lets you "snap" the unplaced scaffold in place at the end of the larger scaffolds. 
 
+Now that you know how to move around and make edits in PretextView, delete all your edits with **Q** while in Edit mode, and press **U** to check to see that all your test edits are gone. You are now ready to edit the assembly for real!
+
+### Step 3: Editing your TPF
 
 
- ### Step 3: Editing your TPF
+### Step 4: Painting your scaffolds
 
 
- ### Step 4: Painting your scaffolds
-
-
- ### Step 5: Finishing your assembly
+### Step 5: Finishing your assembly
