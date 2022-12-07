@@ -39,5 +39,12 @@ When you have done this, you can submit to the cluster by typing sh run.sh.
 This should finish in a handful of minutes (when testing it ran for 2 minutes). You can monitor the progress with `squeue -u <username>`.
 
 
-
 ## Interpreting your k-mer profile plot
+
+A typical k-mer profile plot will look like this (this is the k-mer profile plot for the river lamprey (*Lampetra fluviatilis*) from EBP-Nor): 
+
+![genomescope_plot](https://user-images.githubusercontent.com/110542053/206213929-8a46e185-2f85-40e0-8331-ba090d3b0c3e.png)
+
+The peak on the extreme left are all the kmers that are the result of sequencing errors. The largest peak to the right indicates the homozygous parts of the genomes that account for identical k-mers between the two haplotypes. The smaller peak to the left are the heterozygous kmers, that differentiate the two haplotypes.
+
+What have you learned about your reads from this k-mer profile plot? What is the estimated genome size of *Metschnikowia zobellii*? 
