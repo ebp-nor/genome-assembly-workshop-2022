@@ -81,7 +81,7 @@ GAP     TYPE-2  200
 ?	scaffold_1:3369677-3660413	scaffold_1	PLUS
 ```
 
-You have now made your first edit! There is no need to do anything to the scaffold you have now placed. 
+You have made your first edit! There is no need to do anything to the scaffold you have now placed. 
 
 
 #### "I want to add an unplaced scaffold to the middle of one of the larger, chromosome sized scaffolds, where there is NOT a gap"
