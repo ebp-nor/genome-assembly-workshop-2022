@@ -14,7 +14,7 @@ The creators of GenomeScope2 created another way to visualize and estimate the p
 
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
-conda activate smudgeplot
+conda activate smudgescope
 
 #reads as fastq
 reads=$1
