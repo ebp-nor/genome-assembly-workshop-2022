@@ -38,6 +38,60 @@ To make edits to your TPF in the command line, type:
 nano filename.tpf
 ```
 
+Here are some different scenarios that you may encounter:
+
+#### "I want to add an unplaced scaffold to the end of one of the larger, chromosome sized scaffolds"
+
+No worries, just enter Edit mode, toggle the snap function, and snap the unplaced scaffold onto the end of the larger chromosome sized scaffold. No need to edit the TPF!
+
+
+#### "I want to add an unplaced scaffold to the middle of one of the larger, chromosome sized scaffolds, where there is a gap"
+
+This can be done! Just grab the unplaced scaffold with the space bar and move it to the gap (this is where the "Gaps" extension comes in handy). Press **E** to exit edit mode, and press **U** to see your edits. Here you can see the exact position you moved the scaffold to. 
+
+Then, go to the TPF, and add a **>** to the line you want to remove. For instance, say that we have a gap in scaffold 1, at position 408378. Before editing, the TPF will look like this:
+
+```
+?	scaffold_1:1-408378     scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:408579-1794055	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:1794256-2710345	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:2710546-2734866	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:2735067-3369476	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:3369677-3660413	scaffold_1	PLUS
+```
+
+After editing, your TPF should look like this:
+
+```
+?	scaffold_1:1-408378     scaffold_1	PLUS
+>GAP     TYPE-2  200
+?	scaffold_1:408579-1794055	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:1794256-2710345	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:2710546-2734866	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:2735067-3369476	scaffold_1	PLUS
+GAP     TYPE-2  200
+?	scaffold_1:3369677-3660413	scaffold_1	PLUS
+```
+
+You have now made your first edit! There is no need to do anything to the scaffold you have now placed. 
+
+
+#### "I want to add an unplaced scaffold to the middle of one of the larger, chromosome sized scaffolds, where there is NOT a gap"
+
+While this is possible, we will not be doing those kind of edits in this course. You need a higher resolution editor to be able to create gaps in the correct place in the assembly (such as HiGlass, which you can read about here).
+
+#### "Some of my unplaced scaffolds have ambiguous contact signals, what do I do?"
+
+Ask us for help! You can also read more about these ambiguous signals in GRIT´s documentation here. 
+
 ### Step 4: Painting your scaffolds
 
 
