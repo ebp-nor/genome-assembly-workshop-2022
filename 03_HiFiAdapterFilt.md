@@ -27,11 +27,25 @@ We have set up this script for you. What you need to do is to create a run.sh in
 ln -s /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz . 
 sbatch /projects/ec146/scripts/run_hifiadaptfilt.sh
 ```  
-When you have done this, you can submit to the cluster by typing sh run.sh.
+When you have done this, you can submit to the cluster by typing `sh run.sh.`
 
-This should finish in a handful of minutes (when testing it ran for 1.5 minutes). You can monitor the progress with squeue -u <username>.
+This should finish in a handful of minutes (when testing it ran for 1 minute). You can monitor the progress with `squeue -u <username>`.
 
-Smudgeplot produces several files in addition to the plot itself. You can for instance look at smudgeplot_verbose_summary.txt which contain the same information as the plot, but in text.
+HiFiAdapterFilt creates several files, for instance the filtered file and a statistics file: 
+```
+Started on Wed Dec  7 11:31:02 CET 2022
+For the gsMetZobe_pacbio dataset:
+Removing reads containing adapters a minimum of 44 bp in length and 97% match.
+
+Number of ccs reads: 41700
+Number of adapter contaminated ccs reads: 12 (0.028777% of total)
+Number of ccs reads retained: 41688 (99.9712% of total)
+
+Finished on Wed Dec  7 11:31:48 CET 2022
+```
+
+You should have similar content.
+
 
 
 
