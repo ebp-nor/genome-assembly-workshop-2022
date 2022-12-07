@@ -6,24 +6,18 @@ Now that you have learned a bit more about your dataset you are *almost* ready t
 
 ```
 #!/bin/bash
-#SBATCH --job-name=hifiadapterfilt
-#SBATCH --account=FIKS
-#SBATCH --time=48:0:0
-#SBATCH --mem-per-cpu=4500M
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=16
+#SBATCH --job-name=hifiadaptfilt
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=2G
+#SBATCH --ntasks-per-node=5
 
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
-module load GCC/11.2.0 CMake/3.21.1-GCCcore-11.2.0
-
-source /cluster/projects/path/to/conda.sh
-
-eval "$(conda shell.bash hook)"
 conda activate hifiadapterfilt
 
-export PATH=/cluster/projects/nn9244k/olekto/projects/EBP-Nor/opt/HiFiAdapterFilt/:$PATH
-export PATH=/cluster/projects/nn9244k/olekto/projects/EBP-Nor/opt/HiFiAdapterFilt/DB:$PATH
-export TMPDIR=/cluster/work/users/olekto/tmp
+export PATH=/projects/ec146/opt/HiFiAdapterFilt/:$PATH
+export PATH=/projects/ec146/opt/HiFiAdapterFilt/DB:$PATH
 
-pbadapterfilt.sh -t 16
+pbadapterfilt.sh -t 5
 ```
