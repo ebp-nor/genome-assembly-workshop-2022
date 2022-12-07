@@ -9,7 +9,7 @@ Congratulations, you have created your yeast assembly! But now you have to combi
 #SBATCH --job-name=yahs
 #SBATCH --account=ec146
 #SBATCH --time=4:0:0
-#SBATCH --mem-per-cpu=2G
+#SBATCH --mem-per-cpu=20G
 #SBATCH --ntasks-per-node=5
 
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
@@ -24,10 +24,10 @@ SAMPLE=$2
 
 mkdir -p outs
 
-[ -s hic_markdup.sort_n.bam ] || bwa mem -t 10 -R '@RG\tSM:$SAMPLE\tID:$SAMPLE' -5SPM $REF \
+[ -s hic_markdup.sort_n.bam ] || bwa mem -t 8 -R '@RG\tSM:$SAMPLE\tID:$SAMPLE' -5SPM $REF \
 $3 $4 \
-|samtools view -buS - |samtools sort -@3 -n -T tmp_n -O bam - \
-|samtools fixmate -mr - -|samtools sort -@3 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -n -@3 -n -T temp_n -O bam\
+|samtools view -buS - |samtools sort -@1 -n -T tmp_n -O bam - \
+|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -n -@1 -n -T temp_n -O bam\
 > hic_markdup.sort_n.bam
 
 [ -s $REF.fai ] ||samtools faidx $REF
