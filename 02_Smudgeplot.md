@@ -22,7 +22,7 @@ k=21
 ploidy=2
 
 mkdir -p tmp
-ls $reads > FILES
+echo $reads > FILES
 
 [ -s reads.kmc_suf ] || kmc -k$k -t5 -m38 -ci1 -cs10000 @FILES reads tmp/
 
