@@ -7,28 +7,35 @@ When choosing an assembler, you need to keep your data in mind. Since we want to
 ```
 #!/bin/bash
 #SBATCH --job-name=hifiasm
-#SBATCH --account=FIKS
-#SBATCH --time=96:0:0
-#SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=45000M
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=32
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=20G
+#SBATCH --ntasks-per-node=5
 
-module --force purge
-
-source /cluster/projects/path/to/conda.sh
-
-eval "$(conda shell.bash hook)"
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate hifiasm
 
-hifiasm -o $1 -t32  \
+hifiasm -o $1 -t5  \
 --h1 $2 \
 --h2 $3 \
 $4 \
 1> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".out 2> hifiasm_"`date +\%y\%m\%d_\%H\%M\%S`".err
+
+awk '/^S/{print ">"$2"\n"$3}' $1.hic.hap1.p_ctg.gfa | fold > $1.hic.hap1.p_ctg.fa
+awk '/^S/{print ">"$2"\n"$3}' $1.hic.hap2.p_ctg.gfa | fold > $1.hic.hap2.p_ctg.fa
 ```
 
+
+We have set up this script for you. What you need to do is to create a run.sh in your working folder (`/projects/ec146/work/<username>/hifiasm`) with this content (with nano for instance): 
+ 
 ```
-awk '/^S/{print ">"$2"\n"$3}' in.gfa | fold > out.fa
+sbatch /projects/ec146/scripts/run_hifiasm.sh gsMetZobe \
+/fp/projects01/ec146/data/genomic_data/hic/ERR9503460_1_60x.fastq.gz \
+/fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz \
+/fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
 ```
+
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
+ 
+This should finish in a handful of minutes (when testing it ran for 25 minutes). You can monitor the progress with `squeue -u <username>`.
