@@ -9,7 +9,7 @@ When choosing an assembler, you need to keep your data in mind. Since we want to
 #SBATCH --job-name=hifiasm
 #SBATCH --account=ec146
 #SBATCH --time=4:0:0
-#SBATCH --mem-per-cpu=2G
+#SBATCH --mem-per-cpu=20G
 #SBATCH --ntasks-per-node=5
 
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
