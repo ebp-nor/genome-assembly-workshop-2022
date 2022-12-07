@@ -24,7 +24,7 @@ Try to move around in the contact map. Scrolling the mouse wheel zooms you in an
 
 When your comfortable with this movement, let´s try to bring up some of the other menus! Pressing **E** activates "Edit mode". When this mode is active, the cursor changes. Do you see that the further away from the red diagonal you move, the larger an area of the scaffold is marked by green? This green indicator shows which part of the scaffold you are picking up. Try to make an edit! Cut out a chunk of a scaffold and move it someplace else in the contact map. Don´t worry about whether the edit is correct, we´ll delete all the test edits before we start the proper curation process. 
 
-Move to the far right of the contact map. Are there any 
+Move to the far right of the contact map. Are there any smaller scaffolds with clear red contact signals that you think would go well in any of the larger scaffolds? Hover over them, press the space bar, and move the cursor without clicking the left button. When you have oriented yourself to where you want to place the unplaced scaffold, click the left cursor. If the piece fits best on the end of one of the larger squares, press **S** while in Edit mode to toggle the Snap function. Do you notice that the unplaced scaffold "travels" differently across the contact map, in a skipping motion? This lets you "snap" the unplaced scaffold in place at the end of the larger scaffolds
 
  ### Step 3: Editing your TPF
 
