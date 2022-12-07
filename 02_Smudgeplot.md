@@ -41,10 +41,10 @@ smudgeplot.py hetkmers -o kmcdb_L"$L"_U"$U" < kmcdb_L"$L"_U"$U".dump
 smudgeplot.py plot kmcdb_L"$L"_U"$U"_coverages.tsv
 ```
 
-We have set up this script for you. What you need to do is to create a run.sh in your working folder (/projects/ec146/work/<username>/smudgeplot) with this content: 
+We have set up this script for you. What you need to do is to create a run.sh in your working folder (/projects/ec146/work/<username>/smudgeplot) with this content (with nano for instance): 
  
 ```
-sbatch /projects/ec146/scripts/run_smudgeplot.sh /projects/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
+sbatch /projects/ec146/scripts/run_smudgeplot.sh /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
 ```
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
