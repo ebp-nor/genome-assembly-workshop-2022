@@ -137,13 +137,13 @@ conda activate rapid_curation
 python /cluster/projects/nn8013k/opt/rapid-curation/rapid_pretext2tpf_XL.py \
 kcLamPlan1.h1.decon.fasta.tpf \
 out.pretext.agp_1
-
 ```
 
 Using the new TPF, the chrs.csv-file generated with the Rapid curation suite, and the original fasta, you can create a new fasta with the rapid_join.pl script:
 
 # create new fasta
 
+```
 perl /cluster/projects/nn8013k/opt/rapid-curation/rapid_join.pl -fa kcLamPlan1.h1.decon.fasta \
 -tpf rapid_prtxt_XL.tpf \
 -csv chrs.csv \
