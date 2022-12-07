@@ -12,7 +12,6 @@ The creators of GenomeScope2 created another way to visualize and estimate the p
 #SBATCH --mem-per-cpu=2G
 #SBATCH --ntasks-per-node=5
 
-
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate smudgeplot
@@ -21,7 +20,6 @@ conda activate smudgeplot
 reads=$1
 k=21
 ploidy=2
-
 
 mkdir -p tmp
 ls $reads > FILES
