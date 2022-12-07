@@ -11,14 +11,16 @@ After attending the workshop you should:
 
 ## Our dataset
 
-*Metschnikowia zobellii* is a yeast found in arctic coastal climates. It was first discovered as a water flea parasite, but have since been found in a wide range of organisms, including plants and other arthropods. *Metschnikowia zobellii* has a small genome, with only five chromosomes. You can read more about it (here)[https://www.darwintreeoflife.org/news_item/9-species-our-scientists-are-excited-about-sequencing-in-2022/] (scroll down a bit).
+*Metschnikowia zobellii* is a yeast found in arctic coastal climates. It was first discovered as a water flea parasite, but have since been found in a wide range of organisms, including plants and other arthropods. *Metschnikowia zobellii* has a small genome, with only five chromosomes. You can read more about it [here](https://www.darwintreeoflife.org/news_item/9-species-our-scientists-are-excited-about-sequencing-in-2022/) (scroll down a bit).
 
-(Darwin Tree of Life)[https://www.darwintreeoflife.org] has sequenced the yeast, but not published a genome not for it yet. Fortunately for us, they allow everyone to play with the data anyhow, so we will do that. DToL has some interesting webpages where they list several quality measures for the sequencing (some of which we will do in this workshop) (here)[https://tolqc.cog.sanger.ac.uk/darwin/fungi/Metschnikowia_zobellii/]. It can be worth a look. We downloaded the data from (ENA)[https://www.ebi.ac.uk/ena/browser/view/GCA_939531405.1] and subsampled it to get it to the coverages we expect/plan for. 
+[Darwin Tree of Life](https://www.darwintreeoflife.org) has sequenced the yeast, but not published a genome not for it yet. Fortunately for us, they allow everyone to play with the data anyhow, so we will do that. DToL has some interesting webpages where they list several quality measures for the sequencing (some of which we will do in this workshop) [here](https://tolqc.cog.sanger.ac.uk/darwin/fungi/Metschnikowia_zobellii/). It can be worth a look. We downloaded the data from [ENA](https://www.ebi.ac.uk/ena/browser/view/GCA_939531405.1) and subsampled it to get it to the coverages we expect/plan for. 
 
-The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 1000x coverage. It was subsampled with (seqtk)[https://github.com/lh3/seqtk] like this:
+The genome itself is 14 Mbp, and the PacBio data was almost 17 Gbp, more than 1000x coverage. It was subsampled with [seqtk](https://github.com/lh3/seqtk) like this:
 ```
 seqtk sample ERR9588940.fastq.gz 40000 |gzip > ERR9588940_30x.fastq.gz
 ```
+to get about 30x coverage with PacBio data.
+
 
 
 ## Why do we use a combination of HiFi and Hi-C reads? 
