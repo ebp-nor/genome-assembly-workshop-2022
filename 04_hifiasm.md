@@ -6,7 +6,7 @@ When choosing an assembler, you need to keep your data in mind. Since we want to
 
 ```
 #!/bin/bash
-#SBATCH --job-name=smudgeplot
+#SBATCH --job-name=hifiasm
 #SBATCH --account=ec146
 #SBATCH --time=4:0:0
 #SBATCH --mem-per-cpu=2G
