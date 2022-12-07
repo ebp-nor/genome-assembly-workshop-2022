@@ -151,4 +151,7 @@ perl /cluster/projects/nn8013k/opt/rapid-curation/rapid_join.pl -fa kcLamPlan1.h
 -out hap1_curated.fasta
 ```
 
-And now you are left with a complete, curated, haplotype resolved whole-genome assembly!
+And now you are left with a complete, curated, haplotype resolved whole-genome assembly! 
+
+
+![Well done](https://giphy.com/gifs/great-dicaprio-leonardo-rY93u9tQbybks.gif)
