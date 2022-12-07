@@ -16,8 +16,8 @@ eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)"
 
 conda activate hifiadapterfilt
 
-export PATH=/projects/ec146/opt/HiFiAdapterFilt/:$PATH
-export PATH=/projects/ec146/opt/HiFiAdapterFilt/DB:$PATH
+export PATH=/fp/projects01/ec146/opt/HiFiAdapterFilt/:$PATH
+export PATH=/fp/projects01/ec146/opt/HiFiAdapterFilt/DB:$PATH
 
 pbadapterfilt.sh -t 5
 ```
