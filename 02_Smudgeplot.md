@@ -18,13 +18,14 @@ eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)"
 conda activate smudgeplot
 
 #reads as fastq
-#reads=$1
+reads=$1
 k=21
 ploidy=2
 
 
 mkdir -p tmp
-ls *.fastq* > FILES
+ls $reads > FILES
+
 [ -s reads.kmc_suf ] || kmc -k$k -t5 -m38 -ci1 -cs10000 @FILES reads tmp/
 
 [ -s reads.histo ] || kmc_tools transform reads histogram reads.histo -cx10000
