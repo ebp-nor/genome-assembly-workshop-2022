@@ -46,7 +46,7 @@ sbatch run.sh meryl.db first.fasta second.fasta prefix
 
 ![Merqury plot 2](https://user-images.githubusercontent.com/110542053/206440369-ef889d7f-08ee-4f77-8a87-c0b4042fdb9d.png)
 
-These are two of the Merqury plots generated for the EBP-Nor assembled Arctic reindeer (*Rangifer tarandus*), specifically the spectra_asm plots. These are especially useful for evaluating haploid species assemblies, like *Metschnikowia zobellii*. This is because they can detect k-mers that are shared between both haplotypes (shown in green), and k-mers that are unique to each haplotype (shown in blue and red). The grey shaded area indicates the reads that are not found in either assemblies, and this gives us an indication about the degree of k-mer completeness, as mentioned in the introduction. 
+These are two of the Merqury plots generated for the EBP-Nor assembled Svalbard reindeer (*Rangifer tarandus*), specifically the spectra_asm plots. These are especially useful for evaluating haploid species assemblies, like *Metschnikowia zobellii*. This is because they can detect k-mers that are shared between both haplotypes (shown in green), and k-mers that are unique to each haplotype (shown in blue and red). The grey shaded area indicates the reads that are not found in either assemblies, and this gives us an indication about the degree of k-mer completeness, as mentioned in the introduction. 
 
 Look at the k-mer spectrum plots that you generated for *Metschnikowia zobellii* and answer these questions:
 
