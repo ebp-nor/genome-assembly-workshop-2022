@@ -64,5 +64,5 @@ Before you start reviewing your results, look at the [list of lineages](https://
 
 1. Which of the haplotypes has the highest percentage of complete BUSCO genes?
 
-2. 
+2. What do you think it means for the assembly quality if the number of fragmented, missing or duplicated BUSCO genes are high? Discuss with the people on your table. 
 
