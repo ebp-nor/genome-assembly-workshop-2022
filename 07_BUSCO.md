@@ -46,7 +46,7 @@ busco -c 10 -i ${origdir}/$prefix.fna -l  /cluster/projects/FIKS/opt/busco_dbs/l
 
 ``` 
 
-Create a new directory in your work area named `BUSCO`. Make a new `run.sh` file with `nano run.sh`, and copy the code above into that file. To run the script, use the code below:
+Create a new directory in your work area named `BUSCO`. Make a new `run.sh` file with `nano run.sh`, and copy the code below into that file:
 
 ```
 ln -s path/to/assembly_hap1.fasta .
