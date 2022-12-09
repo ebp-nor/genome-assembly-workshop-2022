@@ -55,6 +55,8 @@ sbatch /projects/ec146/scripts/run_busco.sh assembly_hap1.fasta
 sbatch /projects/ec146/scripts/run_busco.sh assembly_hap2.fasta
 ```
 
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
+
 Til Ole, jeg synes vi burde hardkode lineage inn i scriptet så de blir tvingt til å faktisk se på opsjonene, og skjønne hva -l spesifiserer.
 
 ## Reviewing the BUSCO results
