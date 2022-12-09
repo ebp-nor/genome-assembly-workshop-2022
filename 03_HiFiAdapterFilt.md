@@ -23,15 +23,17 @@ pbadapterfilt.sh -t 5
 ```
 
 We have set up this script for you. What you need to do is to create a run.sh in your working folder (`/projects/ec146/work/<username>/hifiadaptfilt`) with this content (with nano for instance):
+
 ```
 ln -s /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz . 
 sbatch /projects/ec146/scripts/run_hifiadaptfilt.sh
 ```  
-When you have done this, you can submit to the cluster by typing `sh run.sh.`
+When you have done this, you can submit to the cluster by typing `sh run.sh`.
 
 This should finish in a handful of minutes (when testing it ran for 1 minute). You can monitor the progress with `squeue -u <username>`.
 
 HiFiAdapterFilt creates several files, for instance the filtered file and a statistics file: 
+
 ```
 Started on Wed Dec  7 11:31:02 CET 2022
 For the gsMetZobe_pacbio dataset:
