@@ -46,13 +46,14 @@ busco -c 10 -i ${origdir}/$prefix.fna -l  /cluster/projects/FIKS/opt/busco_dbs/l
 
 ``` 
 
-Create a new directory in your work area named `BUSCO`, and make a new `run.sh` file with `nano run.sh`, and copy the code above into that file. To run the script, use the code below:
+Create a new directory in your work area named `BUSCO`. Make a new `run.sh` file with `nano run.sh`, and copy the code above into that file. To run the script, use the code below:
 
 ```
-sbatch run.sh path/to/assembly.fasta lineage
+ln -s path/to/assembly_hap1.fasta .
+ln -s path/to/assembly_hap2.fasta .
+sbatch /projects/ec146/scripts/run_busco.sh assembly_hap1.fasta
+sbatch /projects/ec146/scripts/run_busco.sh assembly_hap2.fasta
 ```
-
-Repeat this for both haplotype assemblies.
 
 Til Ole, jeg synes vi burde hardkode lineage inn i scriptet så de blir tvingt til å faktisk se på opsjonene, og skjønne hva -l spesifiserer.
 
