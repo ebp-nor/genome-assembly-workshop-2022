@@ -23,6 +23,7 @@ prefix=${1%.*}
 
 mkdir -p busco_${prefix}
 origdir=$PWD
+cd busco_${prefix}
 
 busco -c 5 -i ${origdir}/$1 -l /projects/ec146/opt/busco_downloads/lineages/fungi_odb10 -o assembly -m genome  --offline > busco.out 2> busco.err
 
