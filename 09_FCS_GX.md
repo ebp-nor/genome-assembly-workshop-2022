@@ -7,20 +7,19 @@ Contaminants can end up in your assemblies in various different ways. Maybe some
 ```
 #!/bin/bash
 #SBATCH --job-name=fcsgx
-#SBATCH --account=nn8013k
-#SBATCH --time=5:0:0
-#SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=60G 
-#SBATCH --cpus-per-task=10
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=2G
+#SBATCH --ntasks-per-node=5
 
-export SHM_LOC=/cluster/projects/nn8013k/opt/fcs
+export SHM_LOC=/projects/ec146/opt/fcs
 
-echo "GX_NUM_CORES=10" > env.txt
+echo "GX_NUM_CORES=5" > env.txt
 
-python3 /cluster/projects/nn8013k/opt/fcs/dist/run_fcsgx.py --fasta $1 --out-dir ./gx_out/ \
+python3 /projects/ec146/opt/fcs/run_fcsgx.py --fasta $1 --out-dir ./gx_out/ \
 --gx-db  "${SHM_LOC}/gxdb/all" --split-fasta --tax-id $2 \
 --gx-db-disk "${SHM_LOC}/gxdb/all.gxi" \
---container-engine=singularity --image=/cluster/projects/nn8013k/opt/fcs/fcsgx.sif
+--container-engine singularity --image /projects/ec146/opt/fcs/fcsgx.sif
 ```
 
 
