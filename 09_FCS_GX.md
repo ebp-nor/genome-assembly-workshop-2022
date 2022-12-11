@@ -34,3 +34,19 @@ Unfortunately this program requires a lot of memory to run (["approximately 470 
 
 
 After running the decontamination script, which foreign contaminants did you find?
+
+To remove contamination, you can do something like this:
+```
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
+
+conda activate seqtk
+
+grep ">" gsMetZobe_scaffolds_final.fa  |tr -d ">" |sort > all_sequences
+grep EXCLUDE *fcs_gx_report.txt |cut -f 1 |sort > exclude_sequences
+
+comm -23 all_sequences exclude_sequences > keep_sequences
+
+seqtk subseq gsMetZobe_scaffolds_final.fa keep_sequences > gsMetZobe_clean.fa 
+```
+You can do it on the command line, or put it in a small script. Adjust for possible different file names.
+
