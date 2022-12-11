@@ -20,9 +20,6 @@ conda activate merqury
 
 #$1 reads,  $2 first asm, $3 second asm, $4 output prefix 
 
-mkdir -p $4
-cd $4
-
 ln -s $1 .
 
 j=${1%.fastq.gz}
