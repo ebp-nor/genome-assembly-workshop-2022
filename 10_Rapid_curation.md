@@ -180,3 +180,25 @@ cat out/*_telomere.bedgraph |awk -v OFS="\t" '{$4 *= 1000; print}' | PretextGrap
 
 bigWigToBedGraph  out/*_repeat_density.bw /dev/stdout | PretextGraph -i out/out.pretext -n "repeat density"
 ```
+
+### Converting fastq files to BAM
+The rapid curation suite requires Hi-C reads to be in a BAM format. To create that, we did this:
+```
+#!/bin/bash
+#SBATCH --job-name=convert_bam
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=48G
+#SBATCH --ntasks-per-node=10
+
+
+module load picard/2.24.0-Java-11
+
+java -Xms6g -Xmx6g -jar $EBROOTPICARD/picard.jar FastqToSam \
+F1=ERR9503460_1_60x.fastq.gz \
+F2=ERR9503460_1_60x.fastq.gz \
+O=yeast \
+SM=hic_yeast \
+TMP_DIR=.
+```
+
