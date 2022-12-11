@@ -197,7 +197,7 @@ module load picard/2.24.0-Java-11
 java -Xms6g -Xmx6g -jar $EBROOTPICARD/picard.jar FastqToSam \
 F1=ERR9503460_1_60x.fastq.gz \
 F2=ERR9503460_1_60x.fastq.gz \
-O=yeast \
+O=hic_yeast.bam \
 SM=hic_yeast \
 TMP_DIR=.
 ```
