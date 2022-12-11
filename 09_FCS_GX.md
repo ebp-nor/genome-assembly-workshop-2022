@@ -16,11 +16,18 @@ export SHM_LOC=/projects/ec146/opt/fcs
 
 echo "GX_NUM_CORES=5" > env.txt
 
-python3 /projects/ec146/opt/fcs/run_fcsgx.py --fasta $1 --out-dir ./gx_out/ \
+python3 /projects/ec146/opt/fcs/run_fcsgx.py --fasta $1 --out-dir . \
 --gx-db  "${SHM_LOC}/gxdb/all" --split-fasta --tax-id $2 \
 --gx-db-disk "${SHM_LOC}/gxdb/all.gxi" \
 --container-engine singularity --image /projects/ec146/opt/fcs/fcsgx.sif
 ```
 
+As we have done earlier, we have set up this script for you. Create a run.sh in your working folder (`/projects/ec146/work/<username>/fcsgx`) with this content (with `nano` for instance):
+
+```
+sbatch /projects/ec146/scripts/run_gcsgx.sh assembly.fasta \
+taxonomy_id
+```
+You have to modify the run.sh script based on your assembly file and you have to find the taxonomy ID for *Metschnikowia zobellii* and input that.
 
 After running the decontamination script, which foreign contaminants did you find?
