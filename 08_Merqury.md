@@ -9,24 +9,18 @@ To run Merqury, create a new directory named `Merqury` and copy the code in the 
 ```
 #!/bin/bash
 #SBATCH --job-name=merqury
-#SBATCH --account=FIKS
-#SBATCH --time=48:0:0
-##SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=4500M
-#SBATCH --ntasks-per-node=10
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=20G
+#SBATCH --ntasks-per-node=5
 
-
-source /cluster/projects/nn8013k/programs/miniconda3/etc/profile.d/conda.sh
-
-eval "$(conda shell.bash hook)"
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate merqury
 
 #https://github.com/marbl/merqury
 
 #$1 meryl db, $2 first asm $3 second asm, $4 output prefix 
-
-
 
 mkdir -p $4
 cd $4
