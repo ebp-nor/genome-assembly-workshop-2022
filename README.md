@@ -6,7 +6,7 @@ This repository contains the course materials for the EBP-Nor Genome Assembly Wo
 
 ### 09:00-12:00 Assembly
 
-* 09:00-09:15 [Introduction to whole-genome assembly](00_introduction.md)
+* 09:00-09:15 Introduction to whole-genome assembly and [introduction to the study system and infrastructure](00_introduction.md)
 * 09:15-11:55 Assembling the yeast genome
   * GenomeScope2
   * Smudgeplot
