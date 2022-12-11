@@ -45,10 +45,14 @@ fi
 As we did with hifiasm, we have set up this script for you. Create a run.sh in your working folder (`/projects/ec146/work/<username>/yahs`) with this content (with `nano` for instance):
 
 ```
-sbatch /projects/ec146/scripts/run_yahs.sh gsMetZobe \
-put_in_the_rest
+sbatch /projects/ec146/scripts/run_yahs.sh gsMetZobe.hic.hap1.p_ctg.fa \
+gsMetZobe \
+/fp/projects01/ec146/data/genomic_data/hic/ERR9503460_1_60x.fastq.gz \
+/fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz 
 ```
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
 
-This should finish in a handful of minutes (when testing it ran for XX minutes). You can monitor the progress with `squeue -u <username>`.
+This should finish in a handful of minutes (when testing it ran for 6 minutes). You can monitor the progress with `squeue -u <username>`.
+
+Here we have simplified matters a bit and only proposes to scaffold one of the assemblies. Usually, we filter the Hi-C based on unique k-mers in the two assemblies. So that the reads used to scaffold hap1 would not contain reads with k-mers that are unique to hap2, and vice versa. 
