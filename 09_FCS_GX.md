@@ -12,14 +12,14 @@ Contaminants can end up in your assemblies in various different ways. Maybe some
 #SBATCH --mem-per-cpu=2G
 #SBATCH --ntasks-per-node=5
 
-export SHM_LOC=/projects/ec146/opt/fcs
+export SHM_LOC=/fp/projects01/ec146/opt/fcs
 
 echo "GX_NUM_CORES=5" > env.txt
 
-python3 /projects/ec146/opt/fcs/run_fcsgx.py --fasta $1 --out-dir . \
+python3 /fp/projects01/ec146/opt/fcs/run_fcsgx.py --fasta $1 --out-dir . \
 --gx-db  "${SHM_LOC}/gxdb/all" --split-fasta --tax-id $2 \
 --gx-db-disk "${SHM_LOC}/gxdb/all.gxi" \
---container-engine singularity --image /projects/ec146/opt/fcs/fcsgx.sif
+--container-engine singularity --image /fp/projects01/ec146/opt/fcs/fcsgx.sif
 ```
 
 As we have done earlier, we have set up this script for you. Create a run.sh in your working folder (`/projects/ec146/work/<username>/fcsgx`) with this content (with `nano` for instance):
