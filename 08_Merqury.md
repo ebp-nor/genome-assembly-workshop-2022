@@ -11,27 +11,31 @@ To run Merqury, create a new directory named `Merqury` and copy the code in the 
 #SBATCH --job-name=merqury
 #SBATCH --account=ec146
 #SBATCH --time=4:0:0
-#SBATCH --mem-per-cpu=20G
+#SBATCH --mem-per-cpu=2G
 #SBATCH --ntasks-per-node=5
 
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate merqury
 
-#https://github.com/marbl/merqury
-
-#$1 meryl db, $2 first asm $3 second asm, $4 output prefix 
+#$1 reads,  $2 first asm, $3 second asm, $4 output prefix 
 
 mkdir -p $4
 cd $4
 
-merqury.sh $1 ../$2 ../$3 $4 > $4_merqury.out 2> $4_merqury.err
+ln -s $1 .
+
+j=${1%.fastq.gz}
+#loc=$(dirname $1)
+meryl k=21 threads=10 memory=8g count output $j.meryl $1
+
+merqury.sh $j.meryl $2 $3 > $4_merqury.out 2> $4_merqury.err
 ```
 
-To run the script, write:
+Create a run.sh script with the following content (modify so it corresponds to what you have):
 
 ```
-sbatch run.sh meryl.db first.fasta second.fasta prefix
+sbatch /projects/ec146/scripts/run_merqury.sh reads.fastq.gz first.fasta second.fasta prefix
 ```
 
 ## Interpreting a Merqury assembly spectrum plot
