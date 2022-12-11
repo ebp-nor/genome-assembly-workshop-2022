@@ -30,7 +30,7 @@ taxonomy_id
 ```
 You have to modify the run.sh script based on your assembly file and you have to find the taxonomy ID for *Metschnikowia zobellii* and input that.
 
-Unfortunately this program requires a lot of memory to run (["approximately 470 GiB"](https://github.com/ncbi/fcs/wiki/FCS-GX)). If it is given unsufficient memory, the running time can increase by a factor of 10000x. On Fox, there are not that [many nodes](https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/system-overview.md) with a lot of memory. The normal nodes have 501 GiB RAM, while the GPU accelerated nodes have up to 1006 GiB. Ideally, the job should have been allocated a bit more memory than what it strictly needs, but that is not easy here. Luckily, it should run in a handful of minutes if configured properly. 
+Unfortunately this program requires a lot of memory to run (["approximately 470 GiB"](https://github.com/ncbi/fcs/wiki/FCS-GX)). If it is given unsufficient memory, the running time can increase by a factor of 10000x. On Fox, there are not that [many nodes](https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/system-overview.md) with a lot of memory. The normal nodes have 501 GiB RAM, while the GPU accelerated nodes have up to 1006 GiB. Ideally, the job should have been allocated a bit more memory than what it strictly needs, but that is not easy here. Luckily, it should run in a handful of minutes if configured properly (1-30 minutes when tested). 
 
 
 After running the decontamination script, which foreign contaminants did you find?
