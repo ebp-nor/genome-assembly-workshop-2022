@@ -14,7 +14,7 @@ Although hifiasm is a great assembler, and YaHS can create chromosome length sca
 #SBATCH --mem-per-cpu=2G
 #SBATCH --ntasks-per-node=5
 
-eval "$(/fp/fp/projects0101/ec146/miniconda3/bin/conda shell.bash hook)" 
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate curation
 
