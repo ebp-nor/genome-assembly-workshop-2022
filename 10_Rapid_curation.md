@@ -72,7 +72,7 @@ bigWigToBedGraph  out/*_repeat_density.bw /dev/stdout | PretextGraph -i out/out.
 mkdir -p data
 mkdir -p out
 
-cat  ../yahs/gsMetZobe_scaffolds_final.fa > data/ref.fa 
+cat  /fp/projects01/ec146/data/fcsgx/gsMetZobe_clean.fa > data/ref.fa 
 
 echo "/hic/hic_yeast.bam" > data/cram.fofn
 
