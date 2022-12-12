@@ -62,3 +62,7 @@ This is a smudgeplot generated for the EBP-Nor river lamprey (*Lampetra fluviati
 Here we see that based on the coverage of the heterozygous kmer pairs, the most represented haplotype structure for the river lamprey is diploid. 
 
 Which is the most representet haplotype for *Metschnikowia zobellii*? 
+
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)
+
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/03_HiFiAdapterFilt.md)
