@@ -63,6 +63,6 @@ Here we see that based on the coverage of the heterozygous kmer pairs, the most 
 
 Which is the most representet haplotype for *Metschnikowia zobellii*? 
 
-[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)
 
-[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/03_HiFiAdapterFilt.md)
+|[Previous](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/03_HiFiAdapterFilt.md)|
+|---|---|
