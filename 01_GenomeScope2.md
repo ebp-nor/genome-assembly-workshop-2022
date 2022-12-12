@@ -52,6 +52,6 @@ The peak on the extreme left are all the kmers that are the result of sequencing
 
 What have you learned about your reads from the k-mer profile plot you created? What is the estimated genome size of *Metschnikowia zobellii*? 
 
-[<div align="left"><kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/00_introduction.md)
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/00_introduction.md)
 
-[<div align="right"><kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_Smudgeplot.md)
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_Smudgeplot.md)
