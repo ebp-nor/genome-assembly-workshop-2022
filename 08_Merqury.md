@@ -43,6 +43,12 @@ sbatch /projects/ec146/scripts/run_merqury.sh reads.fastq.gz first.fasta second.
 
 These are two of the Merqury plots generated for the EBP-Nor assembled Svalbard reindeer (*Rangifer tarandus*), specifically the spectra_asm plots. These are especially useful for evaluating haploid species assemblies, like *Metschnikowia zobellii*. This is because they can detect k-mers that are shared between both haplotypes (shown in green), and k-mers that are unique to each haplotype (shown in blue and red). The grey shaded area indicates the reads that are not found in either assemblies, and this gives us an indication about the degree of k-mer completeness, as mentioned in the introduction. 
 
+Open a new terminal window, navigate to a folder where you want to place your Merqury png-files, and copy them using this line of code:
+
+```
+scp -r <username>@fox.educloud.no:/projects/ec146/work/benedga/merqury/"*.png" .
+```
+
 Look at the k-mer spectrum plots that you generated for *Metschnikowia zobellii* and answer these questions:
 
 1. Does one of the haplotype have more unique reads than the other? Or are the haplotypes pretty similar?
