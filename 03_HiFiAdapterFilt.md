@@ -49,6 +49,6 @@ Finished on Wed Dec  7 11:31:48 CET 2022
 You should have similar content.
 
 
-[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_Smudgeplot.md)
 
-[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/04_hifiasm.md)
+|[Previous](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_Smudgeplot.md)|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/04_hifiasm.md)|
+|---|---|
