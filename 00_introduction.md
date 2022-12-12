@@ -82,4 +82,4 @@ module list
 YourCommands
 ```
 
-[<kbd> <br> Next <br> </kbd>][https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md]
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)
