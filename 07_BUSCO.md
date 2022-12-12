@@ -32,10 +32,8 @@ busco -c 5 -i ${origdir}/$1 -l /projects/ec146/opt/busco_downloads/lineages/fung
 Create a new directory in your work area named `BUSCO`. Make a new `run.sh` file with `nano run.sh`, and copy the code below into that file:
 
 ```
-ln -s path/to/assembly_hap1.fasta .
-ln -s path/to/assembly_hap2.fasta .
-sbatch /projects/ec146/scripts/run_busco.sh assembly_hap1.fasta
-sbatch /projects/ec146/scripts/run_busco.sh assembly_hap2.fasta
+ln -s ../yahs/gsMetZobe_scaffolds_final.fa .
+sbatch /projects/ec146/scripts/run_busco.sh gsMetZobe_scaffolds_final.fa
 ```
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
