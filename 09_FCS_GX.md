@@ -36,7 +36,7 @@ We should coordinate this, so only a couple people submit to the cluster. Let us
 
 After running the decontamination script, which foreign contaminants did you find?
 
-If you were unable to run it, you can take a look at the results of a previous run at `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.taxonomy.rpt`and `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.fcs_gx_report.txt`. 
+If you were unable to run it, you can take a look at the results of a previous run at `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.taxonomy.rpt`, `/projects/ec146/data/fcsgx/fcsgx.log` and `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.fcs_gx_report.txt`. 
 
 To remove contamination, you can do something like this:
 ```
