@@ -101,3 +101,6 @@ SM=hic_yeast \
 TMP_DIR=.
 ```
 
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/09_FCS_GX.md)
+
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/11_PretextView.md)
