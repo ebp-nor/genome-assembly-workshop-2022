@@ -6,6 +6,8 @@ Although hifiasm is a great assembler, and YaHS can create chromosome length sca
 
 ### Run the suite
 
+As with the other programs in the assembly pipeline, we have set up a script for you (see the code chunk below):
+
 ```
 #!/bin/bash
 #SBATCH --job-name=curation
@@ -65,8 +67,11 @@ cat out/*_gap.bedgraph  | PretextGraph -i out/out.pretext -n "gaps"
 bigWigToBedGraph  out/*_repeat_density.bw /dev/stdout | PretextGraph -i out/out.pretext -n "repeat density"
 ```
 
+This script creates both the Hi-C contact map that we´ll use in PretextView, and the overlays we´ll use to inform our edits during curation. 
 
 ### Starting the script
+
+To run the script above, create a `run.sh` file in a new curation-directory, and run the code using `sh run.sh`. 
 
 ```
 mkdir -p data
@@ -79,6 +84,11 @@ echo "/hic/hic_yeast.bam" > data/cram.fofn
 sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
 ```
 
+After this is finished, you should be left with an out.pretext file, and this can be used for manual curation. To download this file to your local computer, open a new terminal window, navigate to where you want to place your file, and use the code below:
+
+```
+scp -r <username>@fox.educloud.no:/projects/ec146/work/<username>/curation/out/out.pretext .
+```
 
 ### For information: converting fastq files to BAM
 The rapid curation suite requires Hi-C reads to be in a BAM format. To create that, we did this:
