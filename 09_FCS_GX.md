@@ -50,6 +50,6 @@ seqtk subseq gsMetZobe_scaffolds_final.fa keep_sequences > gsMetZobe_clean.fa
 ```
 You can do it on the command line, or put it in a small script. Adjust for possible different file names.
 
-[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/08_Merqury.md)
 
-[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/10_Rapid_curation.md)
+|[Previous](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/08_Merqury.md)|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/10_Rapid_curation.md)|
+|---|---|
