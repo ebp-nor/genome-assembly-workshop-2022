@@ -86,4 +86,4 @@ YourCommands
 We are not the first to create a workshop or tutorials about genome assembly. Often it is good to read about the same 
 https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html
 
-[<br> <div align="right"> <br> <kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)
+[<p align="right"> <input type="button" value="Next" /> </p>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)
