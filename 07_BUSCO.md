@@ -36,7 +36,7 @@ ln -s ../yahs/gsMetZobe_scaffolds_final.fa .
 sbatch /projects/ec146/scripts/run_busco.sh gsMetZobe_scaffolds_final.fa
 ```
 
-When you have done this, you can submit to the cluster by typing `sh run.sh`.
+When you have done this, you can submit to the cluster by typing `sh run.sh`. If you scaffolded both haplotypes, repeat the process for both assemblies.
 
 
 ## Reviewing the BUSCO results
