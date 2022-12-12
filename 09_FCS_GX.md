@@ -32,8 +32,11 @@ You have to modify the run.sh script based on your assembly file and you have to
 
 Unfortunately this program requires a lot of memory to run (["approximately 470 GiB"](https://github.com/ncbi/fcs/wiki/FCS-GX)). If it is given unsufficient memory, the running time can increase by a factor of 10000x. On Fox, there are not that [many nodes](https://www.uio.no/english/services/it/research/platforms/edu-research/help/fox/system-overview.md) with a lot of memory. The normal nodes have 501 GiB RAM, while the GPU accelerated nodes have up to 1006 GiB. Ideally, the job should have been allocated a bit more memory than what it strictly needs, but that is not easy here. Luckily, it should run in a handful of minutes if configured properly (1-30 minutes when tested). 
 
+We should coordinate this, so only a couple people submit to the cluster. Let us know when you are at this point, and we can coordinate this.
 
 After running the decontamination script, which foreign contaminants did you find?
+
+If you were unable to run it, you can take a look at the results of a previous run at `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.taxonomy.rpt`and `/projects/ec146/data/fcsgx/gsMetZobe_scaffolds_final.27328.fcs_gx_report.txt`. 
 
 To remove contamination, you can do something like this:
 ```
@@ -49,6 +52,8 @@ comm -23 all_sequences exclude_sequences > keep_sequences
 seqtk subseq gsMetZobe_scaffolds_final.fa keep_sequences > gsMetZobe_clean.fa 
 ```
 You can do it on the command line, or put it in a small script. Adjust for possible different file names.
+
+
 
 
 |[Previous](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/08_Merqury.md)|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/10_Rapid_curation.md)|
