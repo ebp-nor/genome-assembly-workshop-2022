@@ -88,5 +88,5 @@ https://training.galaxyproject.org/training-material//topics/assembly/tutorials/
 
 
 
-|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_GenomeScope2.md)|
+|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md)|
 |---|
