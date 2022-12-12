@@ -74,7 +74,7 @@ mkdir -p out
 
 cat  ../yahs/gsMetZobe_scaffolds_final.fa > data/ref.fa 
 
-echo "/hic/hic_yeat.bam" > data/cram.fofn
+echo "/hic/hic_yeast.bam" > data/cram.fofn
 
 sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
 ```
