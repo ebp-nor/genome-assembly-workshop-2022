@@ -83,8 +83,12 @@ YourCommands
 ```
 ## Other resources about assembly
 
-We are not the first to create a workshop or tutorials about genome assembly. Often it is good to read about the same 
-https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html
+We are not the first to create a workshop or tutorials about genome assembly. Often it is good to read about the same for a different angle.
+
+Vertebrate Genomes Project as a workflow they have implemented in Galaxy, but with enough detail that you can run it yourself outside of Galaxy. They also link to a bit of background material. You can reach it here: 
+[https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html](https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html)
+
+UC Davis Bioinformatics Core has a genome assembly workshop they held in 2020, which also contains a lot of useful information if you want to deep-dive into this subject. Read it here: [https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/](https://ucdavis-bioinformatics-training.github.io/2020-Genome_Assembly_Workshop/)
 
 
 
