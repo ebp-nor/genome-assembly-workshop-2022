@@ -35,6 +35,7 @@ sbatch /projects/ec146/scripts/run_hifiasm.sh gsMetZobe \
 /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz \
 /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
 ```
+This script contain the unfiltered HiFi reads. Please replace the reads with the filtered reads you created with HiFiAdapterFilt.
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
  
