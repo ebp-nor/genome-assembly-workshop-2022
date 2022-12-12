@@ -50,7 +50,13 @@ A typical k-mer profile plot will look like this (this is the k-mer profile plot
 
 The peak on the extreme left are all the kmers that are the result of sequencing errors. The largest peak to the right indicates the homozygous parts of the genomes that account for identical k-mers between the two haplotypes. The smaller peak to the left are the heterozygous kmers, that differentiate the two haplotypes.
 
-What have you learned about your reads from the k-mer profile plot you created? What is the estimated genome size of *Metschnikowia zobellii*? 
+What have you learned about your reads from the k-mer profile plot you created? To look at the plot you created, open a new terminal window, and navigate to a directory where you want to place your files. When you have found the place where you want to save them, use this code to copy them to your local computer:
+
+```
+scp -r <username>@fox.educloud.no:/projects/ec146/work/<username>/genomescope/"*.png" .
+```
+
+What is the estimated genome size of *Metschnikowia zobellii*? 
 
 
 |[Previous](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/00_introduction.md)|[Next](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/02_Smudgeplot.md)|
