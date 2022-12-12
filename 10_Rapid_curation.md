@@ -93,7 +93,7 @@ cat  /fp/projects01/ec146/data/fcsgx/gsMetZobe_clean.fa > data/ref.fa
 
 echo "/hic/hic_yeast.bam" > data/cram.fofn
 
-sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
+sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_1_60x.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz 
 ```
 
 After this is finished, you should be left with an out.pretext file, and this can be used for manual curation. To download this file to your local computer, open a new terminal window, navigate to where you want to place your file, and use the code below:
