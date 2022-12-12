@@ -56,3 +56,7 @@ When you have done this, you can submit to the cluster by typing `sh run.sh`.
 This should finish in a handful of minutes (when testing it ran for 6 minutes). You can monitor the progress with `squeue -u <username>`.
 
 Here we have simplified matters a bit and only proposes to scaffold one of the assemblies. Usually, we filter the Hi-C based on unique k-mers in the two assemblies. So that the reads used to scaffold hap1 would not contain reads with k-mers that are unique to hap2, and vice versa. 
+
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/04_hifiasm.md)
+
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/06_gfastats.md)
