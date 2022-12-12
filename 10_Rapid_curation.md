@@ -61,9 +61,9 @@ samtools view -h  out/merge.mkdup.bam | PretextMap -o $1.pretext --sortby length
 #skipping telomers since they are not regular in budding yeast, at least not to our knowledge
 
 #put it together
-bigWigToBedGraph coverage.bw  /dev/stdout |PretextGraph -i $1.pretext-n "PB coverage"
+bigWigToBedGraph coverage.bw  /dev/stdout |PretextGraph -i $1.pretext -n "PB coverage"
 
-cat out/*_gap.bedgraph  | PretextGraph -i $1.pretext-n "gaps"
+cat out/*_gap.bedgraph  | PretextGraph -i $1.pretext -n "gaps"
 
 #cat out/*_telomere.bedgraph |awk -v OFS="\t" '{$4 *= 1000; print}' | PretextGraph -i $1.pretext -n "telomers"
 
