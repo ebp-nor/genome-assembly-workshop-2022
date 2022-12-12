@@ -83,7 +83,7 @@ YourCommands
 ```
 ## Other resources about assembly
 
-We are not the first to create a workshop or tutorials about genome assembly. Often it is good to read about the same for a different angle.
+We are not the first to create a workshop or tutorials about genome assembly. Here are a couple of good sources for more information.
 
 Vertebrate Genomes Project as a workflow they have implemented in Galaxy, but with enough detail that you can run it yourself outside of Galaxy. They also link to a bit of background material. You can reach it here: 
 [https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html](https://training.galaxyproject.org/training-material//topics/assembly/tutorials/vgp_genome_assembly/tutorial.html)
