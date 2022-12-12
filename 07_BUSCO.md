@@ -8,41 +8,24 @@ How do you measure how “complete” your assembly is? Since we know our yeast 
 This is the script we use to run BUSCO:
 
 ```
-#!/bin/sh
-#SBATCH --job-name=busco5
-#SBATCH --partition=normal
-#SBATCH --account=FIKS
-#SBATCH --time=5:0:0
-#SBATCH --nodes=1
-#SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=10
-#SBATCH --mem=90G #Memory per node
+#!/bin/bash
+#SBATCH --job-name=busco
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=1G
+#SBATCH --ntasks-per-node=5
 
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
-
-module --force purge
-
-source FIKS
-
-eval "$(conda shell.bash hook)"
-
-conda activate busco5
-
+conda activate busco
 
 prefix=${1%.*}
 
-ln -s $1 ${prefix}.fna
-
-mkdir -p busco5_${2}_${prefix}
+mkdir -p busco_${prefix}
 origdir=$PWD
+cd busco_${prefix}
 
-cd busco5_${2}_${prefix}
-
-echo $PWD
-
-echo ${1}
-
-busco -c 10 -i ${origdir}/$prefix.fna -l  /cluster/projects/FIKS/opt/busco_dbs/lineages/${2}_odb10 -o assembly -m genome  --offline > busco.out 2> busco.err
+busco -c 5 -i ${origdir}/$1 -l /projects/ec146/opt/busco_downloads/lineages/fungi_odb10 -o assembly -m genome  --offline > busco.out 2> busco.err
 
 ``` 
 
@@ -57,7 +40,6 @@ sbatch /projects/ec146/scripts/run_busco.sh assembly_hap2.fasta
 
 When you have done this, you can submit to the cluster by typing `sh run.sh`.
 
-Til Ole, jeg synes vi burde hardkode lineage inn i scriptet så de blir tvingt til å faktisk se på opsjonene, og skjønne hva -l spesifiserer.
 
 ## Reviewing the BUSCO results
 

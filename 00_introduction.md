@@ -33,12 +33,19 @@ When combining these two, we can create haplotype resolved assemblies, meaning w
 
 ## Package management
 
-Write about conda, singularity and the modules we are using.
+Administrating the different programs that are needed in project can be a hassle. We like conda, especially [miniconda](https://docs.conda.io/en/latest/miniconda.html), and have set up different environments we will use for the different analyses. [Bioconda](https://bioconda.github.io) contain a lot of different packages that are relevant for us, and genomics and bioinformatics in general.
 
 To load conda, do this:
 ```
 eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 ```
+
+There are some of the different programs that are not available through conda. For most of these we use [Singularity containers](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html). 
+
+We mostly set up scripts and arranged data so it is ready to run, but ask you to modify them in some cases. We have backups of everything, but please be careful so you don't delete something you shouldn't.
+
+
+
 ## Infrastructure
 
 For the different analyses we are doing, we will use [Educloud](https://www.uio.no/english/services/it/research/platforms/edu-research/). To use it, you need an account which you can get here: [https://research.educloud.no/register](https://research.educloud.no/register). The project we are using in this course is ec146, so please ask for access to that one, and we will let you in. 
@@ -75,4 +82,4 @@ module list
 YourCommands
 ```
 
-[<kbd> <br> Next page <br> </kbd>][https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/01_GenomeScope2.md]
+

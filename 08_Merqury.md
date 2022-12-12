@@ -9,35 +9,30 @@ To run Merqury, create a new directory named `Merqury` and copy the code in the 
 ```
 #!/bin/bash
 #SBATCH --job-name=merqury
-#SBATCH --account=FIKS
-#SBATCH --time=48:0:0
-##SBATCH --partition=bigmem
-#SBATCH --mem-per-cpu=4500M
-#SBATCH --ntasks-per-node=10
+#SBATCH --account=ec146
+#SBATCH --time=4:0:0
+#SBATCH --mem-per-cpu=2G
+#SBATCH --ntasks-per-node=5
 
-
-source /cluster/projects/nn8013k/programs/miniconda3/etc/profile.d/conda.sh
-
-eval "$(conda shell.bash hook)"
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
 
 conda activate merqury
 
-#https://github.com/marbl/merqury
+#$1 reads,  $2 first asm, $3 second asm, $4 output prefix 
 
-#$1 meryl db, $2 first asm $3 second asm, $4 output prefix 
+ln -s $1 .
 
+j=${1%.fastq.gz}
+#loc=$(dirname $1)
+meryl k=21 threads=10 memory=8g count output $j.meryl $1
 
-
-mkdir -p $4
-cd $4
-
-merqury.sh $1 ../$2 ../$3 $4 > $4_merqury.out 2> $4_merqury.err
+merqury.sh $j.meryl $2 $3 > $4_merqury.out 2> $4_merqury.err
 ```
 
-To run the script, write:
+Create a run.sh script with the following content (modify so it corresponds to what you have):
 
 ```
-sbatch run.sh meryl.db first.fasta second.fasta prefix
+sbatch /projects/ec146/scripts/run_merqury.sh reads.fastq.gz first.fasta second.fasta prefix
 ```
 
 ## Interpreting a Merqury assembly spectrum plot

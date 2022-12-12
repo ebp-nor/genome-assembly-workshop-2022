@@ -8,8 +8,12 @@ Run this code in the terminal command line, and fill out the table below.
 
 
 ```
+eval "$(/fp/projects01/ec146/miniconda3/bin/conda shell.bash hook)" 
+conda activate gfastats
+
 gfastats your_assembly.fa
 ```
+The two first lines enable access to the conda system, and the gfastats environment in particular. 
 
 
 Metric | Value
