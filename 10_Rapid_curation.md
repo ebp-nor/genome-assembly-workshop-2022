@@ -41,8 +41,8 @@ bwa index data/ref.fa
 bwa mem -t 8 -5SPM data/ref.fa \
 $4 $5 \
 |samtools view -buS - |samtools sort -@1 -n -T tmp_n -O bam - \
-|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -n -@1 -n -T temp_n -O bam\
-> hic_markdup.sort_n.bam
+|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -@1 -T temp_n -O bam\
+> hic_markdup.sort.bam
 
 #coverage
 minimap2 -ax map-hifi \
@@ -63,7 +63,7 @@ singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runGa
 singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runRepeat.sif -t $1  -s 10000
 
 #for some reason, all reads had mapq == 0, so we'll cheat:
-samtools view -h hic_markdup.sort_n.bam | PretextMap -o $1.pretext --sortby length --sortorder descend --mapq 0
+samtools view -h hic_markdup.sort.bam | PretextMap -o $1.pretext --sortby length --sortorder descend --mapq 0
 
 #telomers
 #singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runTelo.sif -t $1 -s $3
