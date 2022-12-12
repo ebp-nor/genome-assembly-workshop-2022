@@ -45,7 +45,7 @@ fi
 As we did with hifiasm, we have set up this script for you. Create a run.sh in your working folder (`/projects/ec146/work/<username>/yahs`) with this content (with `nano` for instance):
 
 ```
-cp /projects/ec146/work/<username>/hifiasm/gsMetZobe.hic.hap1.p_ctg.fa .
+ln -s ../hifiasm/gsMetZobe.hic.hap1.p_ctg.fa .
 
 sbatch /projects/ec146/scripts/run_yahs.sh gsMetZobe.hic.hap1.p_ctg.fa \
 gsMetZobe \
