@@ -34,3 +34,7 @@ Gap N50 |
 
 
 Why do you think each of these metrics are important for evaluating the quality of your assemblies? Discuss with the person sitting next to you.
+
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/05_YaHS.md)
+
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/07_BUSCO.md)
