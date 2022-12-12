@@ -49,3 +49,6 @@ Look at the k-mer spectrum plots that you generated for *Metschnikowia zobellii*
 
 2. Are a lot of the k-mers shared between the assemblies, or are most of the kmers within the assemblies unique to their own haplotype?
 
+[<kbd> <br> Previous <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/07_BUSCO.md)
+
+[<kbd> <br> Next <br> </kbd>](https://github.com/ebp-nor/genome-assembly-workshop-2022/blob/main/09_FCS_GX.md)
