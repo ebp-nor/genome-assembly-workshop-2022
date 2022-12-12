@@ -46,7 +46,7 @@ These are two of the Merqury plots generated for the EBP-Nor assembled Svalbard 
 Open a new terminal window, navigate to a folder where you want to place your Merqury png-files, and copy them using this line of code:
 
 ```
-scp -r <username>@fox.educloud.no:/projects/ec146/work/benedga/merqury/"*.png" .
+scp -r <username>@fox.educloud.no:/projects/ec146/work/<username>/merqury/"*.png" .
 ```
 
 Look at the k-mer spectrum plots that you generated for *Metschnikowia zobellii* and answer these questions:
