@@ -53,18 +53,21 @@ singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runGa
 #repeats
 singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runRepeat.sif -t $1  -s 10000
 
+#for some reason, all reads had mapq == 0, so we'll cheat:
+samtools view -h  out/merge.mkdup.bam | PretextMap -o $1.pretext --sortby length --sortorder descent --mapq 0
+
 #telomers
 #singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runTelo.sif -t $1 -s $3
 #skipping telomers since they are not regular in budding yeast, at least not to our knowledge
 
 #put it together
-bigWigToBedGraph coverage.bw  /dev/stdout |PretextGraph -i out/out.pretext -n "PB coverage"
+bigWigToBedGraph coverage.bw  /dev/stdout |PretextGraph -i $1.pretext-n "PB coverage"
 
-cat out/*_gap.bedgraph  | PretextGraph -i out/out.pretext -n "gaps"
+cat out/*_gap.bedgraph  | PretextGraph -i $1.pretext-n "gaps"
 
-#cat out/*_telomere.bedgraph |awk -v OFS="\t" '{$4 *= 1000; print}' | PretextGraph -i out/out.pretext -n "telomers"
+#cat out/*_telomere.bedgraph |awk -v OFS="\t" '{$4 *= 1000; print}' | PretextGraph -i $1.pretext -n "telomers"
 
-bigWigToBedGraph  out/*_repeat_density.bw /dev/stdout | PretextGraph -i out/out.pretext -n "repeat density"
+bigWigToBedGraph  out/*_repeat_density.bw /dev/stdout | PretextGraph -i $1.pretext -n "repeat density"
 ```
 
 This script creates both the Hi-C contact map that we´ll use in PretextView, and the overlays we´ll use to inform our edits during curation. 
