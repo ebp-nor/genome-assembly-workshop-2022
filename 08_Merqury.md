@@ -22,9 +22,10 @@ conda activate merqury
 
 ln -s $1 .
 
-j=${1%.fastq.gz}
-#loc=$(dirname $1)
-meryl k=21 threads=10 memory=8g count output $j.meryl $1
+f=$(basename $1)
+
+j=${f%.fastq.gz}
+meryl k=21 threads=10 memory=8g count output $j.meryl $f
 
 merqury.sh $j.meryl $2 $3 > $4_merqury.out 2> $4_merqury.err
 ```
