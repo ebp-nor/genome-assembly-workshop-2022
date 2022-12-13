@@ -100,6 +100,8 @@ After this is finished, you should be left with an out.pretext file, and this ca
 
 ```
 scp -r <username>@fox.educloud.no:/projects/ec146/data/pretext_data/lampetra_planeri_hap1.pretext .
+
+scp -r <username>@fox.educloud.no:/projects/ec146/data/pretext_data/lampetra_planeri_hap1.tpf .
 ```
 
 ### For information: converting fastq files to BAM
