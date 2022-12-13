@@ -32,8 +32,17 @@ $TMP_DIR:/tmp
 "
 
 #hic
-singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runHiC.sif -q 0 -s $1
-rm $HOME/hic_done
+#singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runHiC.sif -q 0 -s $1
+#rm $HOME/hic_done
+#this did not work for some reason, and we were unable to figure it out.
+
+bwa index data/ref.fa
+
+bwa mem -t 8 -5SPM data/ref.fa \
+$4 $5 \
+|samtools view -buS - |samtools sort -@1 -n -T tmp_n -O bam - \
+|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -@1 -T temp_n -O bam\
+> hic_markdup.sort.bam
 
 #coverage
 minimap2 -ax map-hifi \
@@ -54,7 +63,7 @@ singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runGa
 singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runRepeat.sif -t $1  -s 10000
 
 #for some reason, all reads had mapq == 0, so we'll cheat:
-samtools view -h  out/merge.mkdup.bam | PretextMap -o $1.pretext --sortby length --sortorder descent --mapq 0
+samtools view -h hic_markdup.sort.bam | PretextMap -o $1.pretext --sortby length --sortorder descend --mapq 0
 
 #telomers
 #singularity run /fp/projects01/ec146/opt/rapid-curation/rapid_hic_software/runTelo.sif -t $1 -s $3
@@ -84,7 +93,7 @@ cat  /fp/projects01/ec146/data/fcsgx/gsMetZobe_clean.fa > data/ref.fa
 
 echo "/hic/hic_yeast.bam" > data/cram.fofn
 
-sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz
+sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_1_60x.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz 
 ```
 
 After this is finished, you should be left with an out.pretext file, and this can be used for manual curation. However, since the species we were working on had some ambiguous Hi-C contact signals, you can try your hand at curating the EBP-Nor brook lamprey instead! To download this file to your local computer, open a new terminal window, navigate to where you want to place your file, and use the code below:
