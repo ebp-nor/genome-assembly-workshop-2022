@@ -96,7 +96,7 @@ echo "/hic/hic_yeast.bam" > data/cram.fofn
 sbatch /projects/ec146/scripts/run_rapidcuration.sh gsMetZobe /fp/projects01/ec146/data/genomic_data/hic/  /fp/projects01/ec146/data/genomic_data/pacbio/gsMetZobe_pacbio.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_1_60x.fastq.gz /fp/projects01/ec146/data/genomic_data/hic/ERR9503460_2_60x.fastq.gz 
 ```
 
-After this is finished, you should be left with an out.pretext file, and this can be used for manual curation. However, since the species we were working on had some ambiguous Hi-C contact signals, you can try your hand at curating the EBP-Nor brook lamprey instead! To download this file to your local computer, open a new terminal window, navigate to where you want to place your file, and use the code below:
+After this is finished, you should be left with an out.pretext file, and this can be used for manual curation. However, since the yeast species you were working on had some ambiguous Hi-C contact signals, we´re gonna let you try your hand at curating the EBP-Nor brook lamprey instead! To download this file to your local computer, open a new terminal window, navigate to where you want to place your file, and use the code below:
 
 ```
 scp -r <username>@fox.educloud.no:/projects/ec146/data/pretext_data/lampetra_planeri_hap1.pretext .
