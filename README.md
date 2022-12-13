@@ -2,7 +2,7 @@
 
 This repository contains the course materials for the EBP-Nor Genome Assembly Workshop created for the Oslo Bioinformatics Workshop Week 2022. The course is run on infrastructure provided by the University of Oslo. 
 
-You can grab the slides [here](Slides for workshop December 2022.pdf).
+You can grab the slides [here](Slides_for_workshop_December_2022.pdf).
 
 ## Genome assembly, curation and validation - Schedule
 
