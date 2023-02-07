@@ -27,7 +27,7 @@ mkdir -p outs
 [ -s hic_markdup.sort_n.bam ] || bwa mem -t 10 -R '@RG\tSM:$SAMPLE\tID:$SAMPLE' -5SPM $REF \
 $3 $4 \
 |samtools view -buS - |samtools sort -@1 -n -T tmp_n -O bam - \
-|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -n -@1 -n -T temp_n -O bam \
+|samtools fixmate -mr - -|samtools sort -@1 -T hic_tmp -O bam - |samtools markdup -rsS - -  2> hic_markdup.stats |samtools sort -n -@1 -T temp_n -O bam \
 > hic_markdup.sort_n.bam
 
 [ -s $REF.fai ] ||samtools faidx $REF
